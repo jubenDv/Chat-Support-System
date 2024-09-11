@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent Dashboard</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome: <span id="agent-name"></span></h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+    
+    <!-- Body -->
+    <div>
+        <h2>Pending Chats</h2>
+        <div id="pending-chats"></div>
+    </div>
+
+    <div>
+        <h2>Active Chats</h2>
+        <div id="active-chats"></div>
+    </div>
+
+    <!-- Chat Box for Active Conversations -->
+    <div id="chat-box" style="display:none;">
+        <h3>Chat with: <span id="user-info"></span></h3>
+        <div id="messages"></div>
+        <input type="text" id="message" placeholder="Type a message...">
+        <button type="button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="agent.js"></script>
+</body>
+</html>

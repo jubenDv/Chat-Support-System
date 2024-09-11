@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Support</title>
+    <style>
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            background-color: #ccc;
+        }
+        
+        /* Add styles for notifications */
+        .notification {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .notification::before {
+            content: "Bot Response:";
+            font-weight: bold;
+            color: #333;
+            margin-right: 5px;
+        }
+        
+        /* Add styles for messages */
+        .message {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .message-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .message-image {
+            max-width: 300px; /* Adjust as needed */
+            max-height: 300px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat Support</h1>
+    
+    <!-- Chat Request Form -->
+    <div id="chat-request-form">
+        <h2>Request Chat</h2>
+        <form id="request-form" onsubmit="requestChat(); return false;">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <button type="submit" id="request-chat-button">Request Chat</button>
+        </form>
+    </div>
+    
+    <!-- Chat Window -->
+    <div id="chat-window" style="display:none;">
+        <h2>Chat with Support</h2>
+        <div id="notifications"></div> <!-- Add a container for notifications -->
+        <div id="messages"></div>
+        <input type="file" id="image" accept="image/*">
+        <input type="text" id="message" placeholder="Type a message...">
+        <button type="button" id="send-message-button" onclick="sendMessage()">Send</button>
+        <button type="button" id="end-chat-button" onclick="endChat()">End Chat</button>
+    </div>
+    
+    <script src="chat.js"></script>
+</body>
+</html>
+ 
