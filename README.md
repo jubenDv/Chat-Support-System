@@ -4,7 +4,7 @@ A real-time chat support system built using PHP, SQL, and WebSocket for efficien
 
 Features
 
-Real-time messaging using WebSocket
+Real-time messaging using !WebSocket
 Persistent message storage in a MySQL database
 User and agent authentication
 File and image sharing within the chat
