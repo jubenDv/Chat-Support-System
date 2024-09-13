@@ -10,4 +10,4 @@ User and agent authentication
 File and image sharing within the chat
 Basic error handling and reconnection mechanisms
 
-Developed by jubenDv.
+Under Development by jubenDv.
